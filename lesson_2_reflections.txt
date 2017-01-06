@@ -1,0 +1,11 @@
+What happens when you initialize a repository? Why do you need to do it?
+    
+    The hidden folder .git is included in the directory. This is needed to track the files
+    in the directory and the following commits. The nice shell zsh immediately knows to
+    apply git-mechanics on a folder if it has been initialized.
+
+How is the staging area different from the working directory and the repository? What value do you think it offers?
+
+    The staging area is the intermediary in the situation. There we can bundle up files for
+    one single commit. I think it helps to choose wisely what to add when. I am not sure
+    why it is superior to just allowing "git commit" accepting multiple arguments. 
