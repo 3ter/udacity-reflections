@@ -1,0 +1,68 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+	Otherwise I would have to look at every single line and compare it.
+	That would take a long time. And is very tedious. Prone to errors.
+	The diff just marks exactly the differences so I only had to look
+	for few lines and as I knew I was searching for a typo I found
+	"spacr" quite fast. It had to be an addition to the new file,
+	so that was what I was looking for.
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+	Everybody makes a mistake, and I can access those mistakes via version
+	control. That means if I made a typo I just can look up the changes I made
+	and immediately see where it is. I don't have to remember every place I
+	edited something. I can focus on editing.
+	Secondly I would be braver in editing. I would just erase some chunk of
+	code and replace it by another way. If it goes wrong and I need my former
+	approach back - I can do it in an eye-blink.
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+	Like you said earlier, automatic saving is prone to save changes in
+	the middle of the work. It is hard to write an algorithm to decide
+	which changes are meaningful. It could be, that, if the program is syntac-
+	tically correct and there was an editing pause, save a commit. But still
+	this would save to many commits without meaningful messages.
+	There Git is strong - meaningful messages make the history easy to read.
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+	Because Git is for code and code often needs multiple files, they are
+	interconnected in the way that they only work together.
+	For Google Docs each file is viable on its own. They can be treated
+	separately.
+
+How can you use the commands git log and git diff to view the history of files?
+
+	git log gives you the whole history. I type --stat to see the changes
+	right away. At least the number of lines changed and which files where ch.
+	Then I take the first idea. To search you do
+		/<searchterm>	use n and N like in Vim
+	Copy the first ID with the mouse to the clipboard. q to quit.
+	write git diff <first ID> and then CTRL-C to leave the comment to the bash
+	history but unexecuted. Again to the log file, second ID and with the
+	up arrow you get the last commands from the bash, voilá.
+
+	With those tools you can easily spot the differences between two commits.
+
+How might using version control make you more confident to make changes that
+could break something?
+
+	I even can destroy everything. And even commit. After a checkout with the
+	old ID I just have everything back. So I commit before doing great changes.
+	Good to have version control keeps meticulously track of things.
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+	If I ever make a website it will be greatly appreciated to have the security
+	to fall back on previous working files. Like the man in the interview said.
+	I still want to even more program my first game which I like. I suppose
+	I really want to have version control. With my first take on my first little game I
+	even got fumbled up with only a few files. It will get less messy and much more
+	secure with Git.
