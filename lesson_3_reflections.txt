@@ -10,3 +10,51 @@ Git automatically stay up-to-date with your remote repository?
     I want to decide myself when to publish something. I still can track
     any bugs and try things out on my local machine and as long as I
     don't need help from collaborators I don't have to be in sync.
+
+Describe the differences between forks, clones, and branches. When would
+you use one instead of another?
+
+    branches are labels for a series of commits, they are present on the
+    remote as well as locally. Clones are made on GitHub or locally and
+    duplicating a whole repository with all its branches and commits.
+    Forks are only made within GitHub to work on a repository you are
+    not allowed to push to.
+
+What is the benefit of having a copy of the last known state of the
+remote stored locally?
+
+    Without an internet connection I can tell if I am behind or ahead of
+    the origin (my remote in most cases). So when pulling it's
+    immeadiately clear if this ... no. It would not be clear if it's
+    fast forward or not. But. The origin can compare if I have the
+    latest information about the origin. If other people have changed
+    something.
+    At least I always know at which state the public version is.
+
+How would you collaborate without using Git or GitHub? What would be
+easier, and what would be harder?
+
+    Without using Git(Hub) we would check differences manually I
+    suppose. Or with other tools like "diff" implemented in bash. I
+    suppose even with two people -- as we have seen -- there can be
+    quite a messy situation as they can't always tell if they won't
+    touch the things the other person is working on atm.
+    It would be much harder to experiment properly as we always have to
+    manually make copies and keep track of naming the files and so on.
+    It would be easier because we would not have to learn about git. But
+    I believe with the desktop app it's quite easy, although there are
+    tons of things git is capable of. Many things I don't know of yet.
+
+When would you want to make changes in a separate branch rather than
+directly in master? What benefits does each approach have?
+
+    When there is a bigger experimental feature, which is new to the
+    master branch I definitely want to have this in a separate branch...
+    or don't I? Haven't understood that yet properly.
+    In our case before we just were not allowed to actually push onto
+    master. Or do I mix something up?
+    Separate branches are good for new features, as they have the
+    benefit of being save to play with, without breaking master. Still
+    everybody can access master directly.
+    If there is a very secure change I believe master can be updated
+    directly.
