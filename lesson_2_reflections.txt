@@ -29,3 +29,34 @@ history organized? How would branches help?
     development. It's helpful to have this possibility, because then
     it's possible to experiment and still have a clean distinction
     between the (clearly) labelled branches.
+
+How do the diagrams help you visualize the branch structure?
+
+    Through the diagram I read the commit messages more carefully and it
+    was clearer what has been the logical changes made. And I saw
+    immediately which features where only on the coins branch and which
+    only in the master and wished for a way to merge them :D.
+    It's easy to spot parents in the diagram, too.
+
+What is the result of merging two branches together? Why do we represent
+it in the diagram the way we do?
+
+    The result is both changes in one file, so for us that meant we
+    wanted the latest updates of master and include the new coin
+    feature. Deleted lines from the original should have been omitted,
+    new lines included. The merge appears as a new commit.
+    We now have a commit with two parents - all of the commits are
+    reachable. Now we can delete the old branch, as it is included in
+    the new one. Though I am not sure yet, if it is always good to do
+    this. Perhaps there was introduced a bug and the feat should be
+    developed a little more on its own while master is working?
+
+What are the pros and cons of Git’s automatic merging vs. always doing
+merges manually?
+
+    Automatic merging works well, especially after a lot of machine
+    learning. But manually merging most probably ensures that the code
+    is proper after the merge. Especially when there's a conflict as the
+    same lines have been changed there's no way git should guess with
+    only a small confidence. When doing automerge the result really
+    should be valid code!
